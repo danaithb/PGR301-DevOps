@@ -2,4 +2,4 @@ resource "aws_sqs_queue" "image_generation_queue" {
   name = var.sqs_queue_name
 }
 
-#llalalal testing workflow
+#lalalalal testing workflow
