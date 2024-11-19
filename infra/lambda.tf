@@ -68,7 +68,10 @@ resource "aws_lambda_function" "sqs_lambda" {
     }
   }
 
-  timeout = 30
+  lifecycle {
+    prevent_destroy = true
+    ignore_changes = all    
+  }
 }
 
 resource "aws_sqs_queue" "sqs_queue" {

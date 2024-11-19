@@ -6,10 +6,12 @@ terraform {
       version = "~> 5.74.0"
     }
   }
+
   backend "s3" {
-    bucket = "pgr301-2024-terraform-state"
-    key    = "104/terraform.tfstate"
-    region = "eu-west-1"
+    bucket         = "pgr301-2024-terraform-state"  
+    key            = "terraform/state"           
+    region         = "eu-west-1"                   
+    encrypt        = true        
   }
 }
 
